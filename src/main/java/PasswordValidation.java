@@ -32,4 +32,8 @@ public class PasswordValidation {
         }
         return true;
     }
+
+    public static boolean containsSpecialCharacter(String password) {
+        return password.matches(".*[!@#$%&?].*");
+    }
 }

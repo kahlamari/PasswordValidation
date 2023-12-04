@@ -122,4 +122,28 @@ class PasswordValidationTest {
         // THEN
         assertTrue(actual);
     }
+
+    @Test
+    public void hasSpecialCharacterTest_whenContainsSpecialChar_thenTrue() {
+        // GIVEN
+        String input = "Haw@ef9305";
+
+        // WHEN
+        boolean actual = PasswordValidation.containsSpecialCharacter(input);
+
+        // THEN
+        assertTrue(actual);
+    }
+
+    @Test
+    public void hasSpecialCharacterTest_whenPassword_thenFalse() {
+        // GIVEN
+        String input = "Password";
+
+        // WHEN
+        boolean actual = PasswordValidation.containsSpecialCharacter(input);
+
+        // THEN
+        assertFalse(actual);
+    }
 }

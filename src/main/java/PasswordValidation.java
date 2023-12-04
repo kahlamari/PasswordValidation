@@ -16,7 +16,14 @@ public class PasswordValidation {
     }
 
     public static boolean isNotCommonPassword(String password) {
-        String[] commonPasswords = {"password", "12345678"};
+        String[] commonPasswords = {"password",
+                                    "12345678",
+                                    "iloveyou",
+                                    "123456789",
+                                    "1234567890",
+                                    "abcd1234",
+                                    "Aa345678",
+                                    "Password1"};
 
         for (String commonPassword : commonPasswords) {
             if(commonPassword.equalsIgnoreCase(password)) {

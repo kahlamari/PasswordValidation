@@ -98,4 +98,28 @@ class PasswordValidationTest {
         // THEN
         assertFalse(actual);
     }
+
+    @Test
+    public void isNotCommonPasswordTest_when12345678_thenFalse() {
+        // GIVEN
+        String input = "12345678";
+
+        // WHEN
+        boolean actual = PasswordValidation.isNotCommonPassword(input);
+
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    public void isNotCommonPasswordTest_whenHawef9305_thenTrue() {
+        // GIVEN
+        String input = "Hawef9305";
+
+        // WHEN
+        boolean actual = PasswordValidation.isNotCommonPassword(input);
+
+        // THEN
+        assertTrue(actual);
+    }
 }

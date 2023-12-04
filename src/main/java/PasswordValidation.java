@@ -14,4 +14,15 @@ public class PasswordValidation {
     public static boolean hasMixedCaseLetters(String password) {
         return !(password.toLowerCase().equals(password) || password.toUpperCase().equals(password));
     }
+
+    public static boolean isNotCommonPassword(String password) {
+        String[] commonPasswords = {"password", "12345678"};
+
+        for (String commonPassword : commonPasswords) {
+            if(commonPassword.equalsIgnoreCase(password)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

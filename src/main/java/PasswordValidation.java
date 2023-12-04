@@ -12,6 +12,6 @@ public class PasswordValidation {
     }
 
     public static boolean hasMixedCaseLetters(String password) {
-        return !(password.toUpperCase().equals(password) || password.toLowerCase().equals(password));
+        return !(password.toLowerCase().equals(password) || password.toUpperCase().equals(password));
     }
 }

@@ -78,12 +78,24 @@ class PasswordValidationTest {
     @Test
     public void hasMixedCaseLettersTest_whenPaSs_thenTrue() {
         // GIVEN
-        String input = "pAss";
+        String input = "PaSs";
 
         // WHEN
         boolean actual = PasswordValidation.hasMixedCaseLetters(input);
 
         // THEN
         assertTrue(actual);
+    }
+
+    @Test
+    public void hasMixedCaseLettersTest_whenOnlyDigits_thenFalse() {
+        // GIVEN
+        String input = "12345678";
+
+        // WHEN
+        boolean actual = PasswordValidation.hasMixedCaseLetters(input);
+
+        // THEN
+        assertFalse(actual);
     }
 }

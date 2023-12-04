@@ -50,4 +50,40 @@ class PasswordValidationTest {
         // THEN
         assertTrue(actual);
     }
+
+    @Test
+    public void hasMixedCaseLettersTest_whenPASS_thenFalse() {
+        // GIVEN
+        String input = "PASS";
+
+        // WHEN
+        boolean actual = PasswordValidation.hasMixedCaseLetters(input);
+
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    public void hasMixedCaseLettersTest_whenpass_thenFalse() {
+        // GIVEN
+        String input = "pass";
+
+        // WHEN
+        boolean actual = PasswordValidation.hasMixedCaseLetters(input);
+
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    public void hasMixedCaseLettersTest_whenPaSs_thenTrue() {
+        // GIVEN
+        String input = "pAss";
+
+        // WHEN
+        boolean actual = PasswordValidation.hasMixedCaseLetters(input);
+
+        // THEN
+        assertTrue(actual);
+    }
 }

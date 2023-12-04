@@ -10,4 +10,8 @@ public class PasswordValidation {
     public static boolean hasDigit(String password) {
         return password.matches(".*\\d.*");
     }
+
+    public static boolean hasMixedCaseLetters(String password) {
+        return !(password.toUpperCase().equals(password) || password.toLowerCase().equals(password));
+    }
 }

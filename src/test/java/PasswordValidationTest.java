@@ -28,6 +28,30 @@ class PasswordValidationTest {
     }
 
     @Test
+    public void hasMinimumLengthTest_whenEmpty_thenFalse() {
+        // GIVEN
+        String input = "";
+
+        // WHEN
+        boolean actual = PasswordValidation.hasMinimumLength(input);
+
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    public void hasMinimumLengthTest_whenNull_thenFalse() {
+        // GIVEN
+        String input = null;
+
+        // WHEN
+        boolean actual = PasswordValidation.hasMinimumLength(input);
+
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
     public void hasDigitTest_whenNoDigits_thenFalse() {
         // GIVEN
         String input = "pass";
@@ -124,7 +148,7 @@ class PasswordValidationTest {
     }
 
     @Test
-    public void hasSpecialCharacterTest_whenContainsSpecialChar_thenTrue() {
+    public void containsSpecialCharacterTest_whenContainsSpecialChar_thenTrue() {
         // GIVEN
         String input = "Haw@ef9305";
 
@@ -136,7 +160,7 @@ class PasswordValidationTest {
     }
 
     @Test
-    public void hasSpecialCharacterTest_whenPassword_thenFalse() {
+    public void containsSpecialCharacterTest_whenPassword_thenFalse() {
         // GIVEN
         String input = "Password";
 

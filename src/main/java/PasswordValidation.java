@@ -4,7 +4,7 @@ public class PasswordValidation {
     }
 
     public static boolean hasMinimumLength(String password) {
-        return password.length() > 9;
+        return password.length() > 7;
     }
 
     public static boolean hasDigit(String password) {

@@ -16,9 +16,9 @@ class PasswordValidationTest {
     }
 
     @Test
-    public void hasMinimumLengthTest_when10Chars_thenTrue() {
+    public void hasMinimumLengthTest_when8Chars_thenTrue() {
         // GIVEN
-        String input = "password10";
+        String input = "password";
 
         // WHEN
         boolean actual = PasswordValidation.hasMinimumLength(input);

@@ -2,13 +2,6 @@ import java.security.SecureRandom;
 import java.util.Random;
 
 public class PasswordValidation {
-
-    public static boolean isValid(String password) {
-        return hasMinimumLength(password) &&
-                hasDigit(password) &&
-                hasMixedCaseLetters(password) &&
-                containsSpecialCharacter(password);
-    }
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
@@ -50,6 +43,12 @@ public class PasswordValidation {
         return password.matches(".*[!@#$%&?].*");
     }
 
+    public static boolean isValid(String password) {
+        return hasMinimumLength(password) &&
+                hasDigit(password) &&
+                hasMixedCaseLetters(password) &&
+                containsSpecialCharacter(password);
+    }
     public static String generateRandomValidPassword() {
         /*
         Setting up the function by building the space of characters that

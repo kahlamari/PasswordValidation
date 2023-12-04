@@ -170,4 +170,16 @@ class PasswordValidationTest {
         // THEN
         assertFalse(actual);
     }
+
+    @Test
+    public void generateRandomValidPasswordTest() {
+        // GIVEN
+        String input = PasswordValidation.generateRandomValidPassword();
+
+        // WHEN
+        boolean actual = PasswordValidation.isValid(input);
+
+        // THEN
+        assertTrue(actual);
+    }
 }
